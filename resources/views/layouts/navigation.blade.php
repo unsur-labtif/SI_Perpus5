@@ -16,7 +16,7 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-                @hasrole('mahasiswa')
+                @hasrole('admin')
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('role')" :active="request()->routeIs('role')">
                         {{ __('Role') }}
@@ -24,8 +24,7 @@
                 </div>
                 @endhasrole
                 {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('book')" :active="request()-
-                    >routeIs('book') || request()->routeIs('book.create')">
+                    <x-nav-link :href="route('book')" :active="request()->routeIs('book') || request()->routeIs('book.create')">
                         {{ __('Book') }}
                     </x-nav-link>
                 </div> --}}

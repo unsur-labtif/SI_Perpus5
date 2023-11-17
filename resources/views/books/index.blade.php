@@ -40,14 +40,15 @@
                             </td>
                             <td>{{ $book->quantity }}</td>
                             <td>{{ $book->bookshelf->code }}-{{ $book->bookshelf->name }}</td>
-                            {{-- <td>
+                            <td>
                                 <x-primary-button tag="a" href="{{route('book.edit', $book->id)}}">Edit
                                 </x-primary-button>
-                            </td>
-                            <x-danger-button x-data=""
+                                <x-danger-button x-data=""
                                 x-on:click.prevent="$dispatch('open-modal', 'confirm-book-deletion')"
                                 x-on:click="$dispatch('set-action', '{{route('book.destroy', $book->id) }}')">{{
-                                __('Delete') }}</x-danger-button> --}}
+                                __('Delete') }}</x-danger-button>
+                            </td>
+
                         </tr>
                         @endforeach
                     </x-table>
